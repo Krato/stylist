@@ -1,5 +1,5 @@
 {
-  "name": "floatingpoint/stylist",
+  "name": "infinety/stylist-custom",
   "description": "Laravel 5 theming package.",
   "authors": [
     {
@@ -14,7 +14,7 @@
   "require": {
     "php": "^7.0",
     "laravelcollective/html": "~5.5",
-    "illuminate/support": "~5.5"
+    "illuminate/support": "~5.5.0|~5.6.0|~5.7.0|~5.8.0|^6.0"
   },
   "require-dev": {
     "mockery/mockery": "^0.9.5",

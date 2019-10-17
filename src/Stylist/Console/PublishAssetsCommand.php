@@ -2,9 +2,8 @@
 namespace FloatingPoint\Stylist\Console;
 
 use FloatingPoint\Stylist\Theme\Theme;
-use Stylist;
 use Illuminate\Console\Command;
-use Illuminate\Contracts\Container\Container;
+use Stylist;
 use Symfony\Component\Console\Input\InputArgument;
 
 class PublishAssetsCommand extends Command
@@ -41,7 +40,7 @@ class PublishAssetsCommand extends Command
      */
     protected function setupThemes()
     {
-        $this->laravel['events']->fire('stylist.publishing');
+        $this->laravel['events']->dispatch('stylist.publishing');
 
         $themes = Stylist::themes();
 
@@ -80,7 +79,7 @@ class PublishAssetsCommand extends Command
      */
     protected function publishSingle(Theme $theme)
     {
-        $themePath = public_path('themes/' . $theme->getAssetPath());
+        $themePath = public_path('themes/'.$theme->getAssetPath());
 
         $this->laravel['files']->copyDirectory($theme->getPath().'/assets/', $themePath);
 
@@ -95,7 +94,7 @@ class PublishAssetsCommand extends Command
     public function getArguments()
     {
         return [
-            ['theme', InputArgument::OPTIONAL, 'Name of the theme you wish to publish']
+            ['theme', InputArgument::OPTIONAL, 'Name of the theme you wish to publish'],
         ];
     }
 }
