@@ -3,7 +3,10 @@
 
 [![Build Status](https://img.shields.io/travis/floatingpointsoftware/stylist.svg?branch=master)](https://travis-ci.org/floatingpointsoftware/stylist)
 
-Stylist is a Laravel 5.5+ compatible package for theming your Laravel applications.
+Stylist is a Laravel 5.5+ and 6+ compatible package for theming your Laravel applications.
+
+## This is a fork for custom use. Please use the original source:
+https://github.com/floatingpointsoftware/stylist
 
 ## Installation
 
