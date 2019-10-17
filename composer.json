@@ -11,6 +11,7 @@
       "email": "mike@mjdugan.com"
     }
   ],
+  "license": "MIT",
   "require": {
     "php": "^7.0",
     "laravelcollective/html": "~5.5",
